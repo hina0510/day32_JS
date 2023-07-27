@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var cnt=0;
+		const inner = () =>{
+			cnt++;
+			let msg = `내용 : ${cnt}<br>`;
+			let txt = document.getElementById("txt");
+			//txt.innerHTML = msg;//텍스트 대체해서 갱신
+			//txt.insertAdjacentHTML("afterbegin", msg);//상단에 내용 갱신하여 출력
+			txt.insertAdjacentHTML("beforeend", msg);//하단에 내용 갱신하여 출력
+			
+		}
+		
+	</script>
+	<div id="txt">안녕하세요</div>
+	<button onclick="inner()">inner</button>
+</body>
+</html>
